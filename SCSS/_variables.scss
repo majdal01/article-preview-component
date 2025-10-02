@@ -1,0 +1,55 @@
+/* Spacing */
+$spacing-2000: 10rem; //160px
+$spacing-1300: 6.5rem; //104px
+$spacing-800: 4rem; //64px
+$spacing-700: 3.5rem; //56px
+$spacing-600: 3rem; //48px
+$spacing-500: 2.5rem; //40px
+$spacing-400: 2rem; //32px
+$spacing-300: 1.5rem; //24px
+$spacing-200: 1rem; //16px
+$spacing-0: 0; //0px
+
+/* Colors */
+$white: hsl(0, 100%, 100%);
+
+$grey-900: hsl(217, 19%, 35%);
+$grey-500: hsl(214, 17%, 51%);
+$grey-400: hsl(212, 23%, 69%);
+$grey-200: hsl(210, 46%, 95%);
+
+/* Typography */
+$font-family: 'Manrope', sans-serif;
+
+@mixin text-preset-1 {
+    font-family: $font-family;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.016rem
+}
+
+@mixin text-preset-2-medium {
+    font-family:  $font-family;
+    font-size: 0.813rem; /* 13px */
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.12%;
+}
+
+@mixin text-preset-2-bold {
+    font-family:  $font-family;
+    font-size: 0.813rem; /* 13px */
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.12%;
+}
+
+@mixin text-preset-3 {
+    font-family:  $font-family;
+    font-size: 0.813rem; /* 13px */
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 25%;
+    text-transform: uppercase;
+}
