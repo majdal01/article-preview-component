@@ -35,7 +35,7 @@ $font-family: 'Manrope', sans-serif;
     font-size: 0.813rem; /* 13px */
     font-weight: 400;
     line-height: 140%;
-    letter-spacing: 0.12%;
+    letter-spacing: 0.0012em;
 }
 
 @mixin text-preset-2-bold {
@@ -43,7 +43,7 @@ $font-family: 'Manrope', sans-serif;
     font-size: 0.813rem; /* 13px */
     font-weight: 700;
     line-height: 140%;
-    letter-spacing: 0.12%;
+    letter-spacing: 0.0012em;
     color: $grey-900;
 }
 
@@ -52,6 +52,6 @@ $font-family: 'Manrope', sans-serif;
     font-size: 0.813rem; /* 13px */
     font-weight: 500;
     line-height: 140%;
-    letter-spacing: 25%;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
 }

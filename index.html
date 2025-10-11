@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./SCSS/style.css">
+
+  <script src="/script.js" defer></script>
   
   <title>Frontend Mentor | Article preview component</title>
 
@@ -36,9 +38,16 @@
             <h2>Michelle Appleton</h2>
             <p>28 Jun 2020</p>
           </article>
-          <div class="icon-container">
-            <img class="icon-img" src="images/icon-share.svg" alt="Share">
-          </div>
+          <button class="share-container share-img" id="share" type="button" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="currentColor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          </button>
+        </div>
+
+        <div class="popup-container">
+          <p class="popup-p">share</p>
+          <img src="images/icon-facebook.svg" alt="Facebook">
+          <img src="images/icon-twitter.svg" alt="Twitter">
+          <img src="images/icon-pinterest.svg" alt="Pinterest">
         </div>
 
       </section>

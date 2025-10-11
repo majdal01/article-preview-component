@@ -67,7 +67,7 @@ p {
                 padding-right: $spacing-200;
             }
 
-            .icon-container{
+            .share-container{
                 box-sizing: content-box;
                 height: calc(100% - 1rem);
                 width: $spacing-200;
@@ -77,9 +77,42 @@ p {
                 justify-content: center;
                 margin-left: auto;
                 background-color: $grey-200;
-                border-radius: 50%;
+                border-radius: 100%;
+                border: none;
+                cursor: pointer;
             }
-            
+            .share-img.active{
+                background-color: #6E8098;   
+                color: white;
+            } 
+        }
+
+        .popup-container{
+            display: flex;
+            background-color: $grey-900;
+            justify-content: space-around;
+            max-width: 15.5rem;
+            padding: $spacing-300;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 10px 10px 0 rgba(201, 213, 225, 0.5);
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-width: 15px 15px 0;
+                border-style: solid;
+                border-color: $grey-900 transparent;
+            }
+
+            .popup-p{
+                @include text-preset-3;
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ h2 {
   font-size: 0.813rem; /* 13px */
   font-weight: 700;
   line-height: 140%;
-  letter-spacing: 0.12%;
+  letter-spacing: 0.0012em;
   color: hsl(217, 19%, 35%);
 }
 
@@ -41,7 +41,7 @@ p {
   font-size: 0.813rem; /* 13px */
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: 0.12%;
+  letter-spacing: 0.0012em;
   color: hsl(212, 23%, 69%);
 }
 
@@ -79,7 +79,7 @@ p {
   height: 2.5rem;
   padding-right: 1rem;
 }
-.main-container .text-section .author-section .icon-container {
+.main-container .text-section .author-section .share-container {
   box-sizing: content-box;
   height: calc(100% - 1rem);
   width: 1rem;
@@ -89,7 +89,43 @@ p {
   justify-content: center;
   margin-left: auto;
   background-color: hsl(210, 46%, 95%);
-  border-radius: 50%;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+}
+.main-container .text-section .author-section .share-img.active {
+  background-color: #6E8098;
+  color: white;
+}
+.main-container .text-section .popup-container {
+  display: flex;
+  background-color: hsl(217, 19%, 35%);
+  justify-content: space-around;
+  max-width: 15.5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 10px 0 rgba(201, 213, 225, 0.5);
+}
+.main-container .text-section .popup-container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent;
+}
+.main-container .text-section .popup-container .popup-p {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.813rem; /* 13px */
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
