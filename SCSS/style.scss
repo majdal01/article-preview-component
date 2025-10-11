@@ -107,8 +107,9 @@ p {
 @media (max-width: 375px) {
 
     body{
-        margin: $spacing-600 $spacing-400;
+        margin: $spacing-600 $spacing-300;
     }
+
 
     .main-container{
         flex-direction: column;
@@ -124,6 +125,11 @@ p {
     
     .text-section{
         width: 100%;
+        padding: $spacing-500 $spacing-300 $spacing-200 $spacing-300;
+
+        .main-p{
+            padding-bottom: $spacing-600;
+        }
     }
 
 }
