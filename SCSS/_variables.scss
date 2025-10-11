@@ -26,7 +26,8 @@ $font-family: 'Manrope', sans-serif;
     font-size: 1.25rem; /* 20px */
     font-weight: 700;
     line-height: 130%;
-    letter-spacing: 0.016rem
+    letter-spacing: 0.016rem;
+    color: $grey-900;
 }
 
 @mixin text-preset-2-medium {
@@ -43,6 +44,7 @@ $font-family: 'Manrope', sans-serif;
     font-weight: 700;
     line-height: 140%;
     letter-spacing: 0.12%;
+    color: $grey-900;
 }
 
 @mixin text-preset-3 {

@@ -6,4 +6,118 @@
   margin: 0;
   padding: 0;
   font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto 6.25rem;
+}
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.016rem;
+  color: hsl(217, 19%, 35%);
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.813rem; /* 13px */
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  color: hsl(217, 19%, 35%);
+}
+
+p {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.813rem; /* 13px */
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  color: hsl(212, 23%, 69%);
+}
+
+.main-container {
+  display: flex;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 10px;
+  max-width: 45.625rem;
+  align-items: stretch;
+}
+.main-container .img-container {
+  max-width: 17.813rem;
+  height: auto;
+}
+.main-container .img-container .main-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-container .text-section {
+  padding: 2rem 2.5rem;
+  width: 80%;
+}
+.main-container .text-section .main-p {
+  padding-bottom: 1.5rem;
+  color: hsl(214, 17%, 51%);
+}
+.main-container .text-section .author-section {
+  display: flex;
+}
+.main-container .text-section .author-section .author-img {
+  border-radius: 50%;
+  height: 2.5rem;
+  padding-right: 1rem;
+}
+.main-container .text-section .author-section .icon-container {
+  box-sizing: content-box;
+  height: calc(100% - 1rem);
+  width: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-left: auto;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: auto 5rem;
+  }
+  .main-container .img-container {
+    max-width: 14.313rem;
+  }
+  .main-container .text-section {
+    padding: 2.5rem 2rem;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    margin: 3rem 2rem;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .main-container .img-container {
+    max-width: 100%;
+    height: auto;
+  }
+  .main-container .img-container .main-img {
+    border-radius: 10px 10px 0 0;
+  }
+  .main-container .text-section {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

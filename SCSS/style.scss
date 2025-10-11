@@ -6,3 +6,125 @@
     padding: 0;
     font-family: $font-family;
 }
+
+body {
+    background-color: $grey-200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto 6.25rem
+}
+
+h1 {
+    @include text-preset-1;
+    padding-bottom: $spacing-300;
+}
+
+h2 {
+    @include text-preset-2-bold;
+}
+
+p {
+    @include text-preset-2-medium;
+    color: $grey-400;
+}
+
+.main-container {
+    display: flex;
+    background-color: $white;
+    border-radius: 10px;
+    max-width: 45.625rem;
+    align-items: stretch;
+
+    .img-container {
+        max-width: 17.813rem;
+        height: auto;
+
+        .main-img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+    }
+    }
+
+    .text-section {
+        padding: $spacing-400 $spacing-500;
+        width: 80%;
+
+        .main-p {
+            padding-bottom: $spacing-300;
+            color: $grey-500;
+        }
+        
+        .author-section {
+            display: flex;
+           
+            .author-img{
+                border-radius: 50%;
+                height: $spacing-500;
+                padding-right: $spacing-200;
+            }
+
+            .icon-container{
+                box-sizing: content-box;
+                height: calc(100% - 1rem);
+                width: $spacing-200;
+                padding: 0.5rem;
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                margin-left: auto;
+                background-color: $grey-200;
+                border-radius: 50%;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    body{
+        margin: auto 5rem;
+    }
+
+    .main-container{
+
+        .img-container{
+            max-width: 14.313rem;
+        }
+
+        .text-section{
+            padding: $spacing-500 $spacing-400;
+        }
+        
+    }
+    
+}
+
+@media (max-width: 375px) {
+
+    body{
+        margin: $spacing-600 $spacing-400;
+    }
+
+    .main-container{
+        flex-direction: column;
+
+        .img-container {
+        max-width: 100%;
+        height: auto;
+
+        .main-img {
+        border-radius: 10px 10px 0 0;
+        }
+        }
+    
+    .text-section{
+        width: 100%;
+    }
+
+}
+}
