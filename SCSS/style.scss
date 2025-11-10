@@ -1,3 +1,8 @@
+// Tip: compile fra projekt-roden. Brug citationstegn hvis stien indeholder mellemrum.
+// Eksempel:
+// cd "/Users/beast/Library/Mobile Documents/com~apple~CloudDocs/Frontendmentor/Javascript/Article Preview Component/article-preview-component-master"
+// sass "SCSS/style.scss:css/style.css" --watch
+
 @use './variables' as *;
 
 * {
@@ -46,12 +51,13 @@ p {
         width: 100%;
         border-radius: 10px 0 0 10px;
         object-fit: cover;
-    }
+        }
     }
 
     .text-section {
         padding: $spacing-400 $spacing-500;
         width: 80%;
+        position: relative;
 
         .main-p {
             padding-bottom: $spacing-300;
@@ -61,60 +67,75 @@ p {
         .author-section {
             display: flex;
            
-            .author-img{
+            .author-img {
                 border-radius: 50%;
                 height: $spacing-500;
                 padding-right: $spacing-200;
             }
 
-            .share-container{
-                box-sizing: content-box;
-                height: calc(100% - 1rem);
-                width: $spacing-200;
-                padding: 0.5rem;
-                display: flex;
-                align-self: center;
-                justify-content: center;
+            .share-wrapper {
+                position: relative;
+                display: inline-block;
                 margin-left: auto;
-                background-color: $grey-200;
-                border-radius: 100%;
-                border: none;
-                cursor: pointer;
+
+                .share-svg {
+                    width: 2rem;
+                    height: 2rem;
+                    padding: 0.5rem;
+                    background: $grey-500;
+                    border-radius: 50%;
+                    border: none;
+                    color: $white;
+                    cursor: pointer;
+                    transition: background-color 0.2s;
+
+                    &:hover {
+                        background-color: $grey-200;
+                        color: $grey-500;
+                    }
+                }
+
+                .popup-container {
+                    display: none;
+                    position: absolute;
+                    bottom: 3.5rem; // vises over knappen
+                    left: 50%;
+                    transform: translateX(-50%); // centrer
+                    background-color: $grey-900;
+                    color: white;
+                    border-radius: 10px;
+                    padding: 1rem 1.5rem;
+                    width: 14rem;
+                    justify-content: space-around;
+                    align-items: center;
+                    gap: 1rem;
+                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+                    z-index: 10;
+
+                     &::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-width: 8px;
+                        border-style: solid;
+                        border-color: $grey-900 transparent transparent transparent;
+                        }
+
+                    .popup-p {
+                        @include text-preset-3;
+                    }
+
+                    &.show {
+                        display: flex;
+                    }
             }
-            .share-img.active{
-                background-color: #6E8098;   
-                color: white;
-            } 
+
+
         }
-
-        .popup-container{
-            display: flex;
-            background-color: $grey-900;
-            justify-content: space-around;
-            max-width: 15.5rem;
-            padding: $spacing-300;
-            border-radius: 10px;
-            position: relative;
-            box-shadow: 0 10px 10px 0 rgba(201, 213, 225, 0.5);
-
-            &::after{
-                content: "";
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 0;
-                height: 0;
-                border-width: 15px 15px 0;
-                border-style: solid;
-                border-color: $grey-900 transparent;
-            }
-
-            .popup-p{
-                @include text-preset-3;
-            }
-        }
-    }
+    }    
+}
 }
 
 @media (max-width: 768px) {
@@ -128,42 +149,8 @@ p {
         .img-container{
             max-width: 14.313rem;
         }
-
         .text-section{
             padding: $spacing-500 $spacing-400;
         }
-        
     }
-    
-}
-
-@media (max-width: 375px) {
-
-    body{
-        margin: $spacing-600 $spacing-300;
-    }
-
-
-    .main-container{
-        flex-direction: column;
-
-        .img-container {
-        max-width: 100%;
-        height: auto;
-
-        .main-img {
-        border-radius: 10px 10px 0 0;
-        }
-        }
-    
-    .text-section{
-        width: 100%;
-        padding: $spacing-500 $spacing-300 $spacing-200 $spacing-300;
-
-        .main-p{
-            padding-bottom: $spacing-600;
-        }
-    }
-
-}
 }

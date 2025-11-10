@@ -1,0 +1,12 @@
+{
+  "name": "article-preview-component",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass \"SCSS/style.scss:css/style.css\"",
+    "watch": "sass \"SCSS/style.scss:css/style.css\" --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.71.0"
+  }
+}

@@ -1,7 +1,10 @@
 
-const share = document.getElementById("share");
+const shareBtn = document.getElementById("share");
+const popup = document.getElementById("popup")
 
-share.addEventListener("click", () =>{
-    const isActive = share.classList.toggle("active");
-    share.setAttribute("aria-pressed", isActive);
+shareBtn.addEventListener("click", () => {
+  popup.classList.toggle('show');
+  
+  const isPressed = shareBtn.getAttribute('aria-pressed') === 'true';
+  shareBtn.setAttribute('aria-pressed', !isPressed);
 });
