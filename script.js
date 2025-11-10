@@ -4,6 +4,7 @@ const popup = document.getElementById("popup")
 
 shareBtn.addEventListener("click", () => {
   popup.classList.toggle('show');
+  document.querySelector('.author-section').classList.toggle('popup-active');
   
   const isPressed = shareBtn.getAttribute('aria-pressed') === 'true';
   shareBtn.setAttribute('aria-pressed', !isPressed);

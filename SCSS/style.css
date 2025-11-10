@@ -89,16 +89,17 @@ p {
   width: 2rem;
   height: 2rem;
   padding: 0.5rem;
-  background: hsl(214, 17%, 51%);
+  background: hsl(210, 46%, 95%);
   border-radius: 50%;
   border: none;
-  color: hsl(0, 100%, 100%);
+  color: hsl(214, 17%, 51%);
   cursor: pointer;
   transition: background-color 0.2s;
+  z-index: 999;
 }
 .main-container .text-section .author-section .share-wrapper .share-svg:hover {
-  background-color: hsl(210, 46%, 95%);
-  color: hsl(214, 17%, 51%);
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(0, 100%, 100%);
 }
 .main-container .text-section .author-section .share-wrapper .popup-container {
   display: none;
@@ -149,6 +150,54 @@ p {
   }
   .main-container .text-section {
     padding: 2.5rem 2rem;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    margin: 3rem 1.5rem;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .main-container .img-container {
+    max-width: 100%;
+    height: auto;
+  }
+  .main-container .img-container .main-img {
+    border-radius: 10px 10px 0 0;
+  }
+  .main-container .text-section {
+    width: 100%;
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+  }
+  .main-container .text-section .main-p {
+    padding-bottom: 3rem;
+  }
+  .main-container .text-section .author-section.popup-active .author-img, .main-container .text-section .author-section.popup-active .author {
+    display: none;
+  }
+  .main-container .text-section .author-section .share-wrapper {
+    position: static;
+    z-index: 0;
+  }
+  .main-container .text-section .author-section .share-wrapper .share-svg {
+    position: relative;
+    z-index: 30;
+    margin-bottom: 0.5rem;
+  }
+  .main-container .text-section .author-section .share-wrapper .popup-container {
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 1.8rem 10rem 1.8rem 2rem;
+    display: none;
+    z-index: 10;
+  }
+  .main-container .text-section .author-section .share-wrapper .popup-container::after {
+    display: none;
+  }
+  .main-container .text-section .author-section .share-wrapper .popup-container.show {
+    display: flex;
   }
 }
 

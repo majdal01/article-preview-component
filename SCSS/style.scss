@@ -82,16 +82,17 @@ p {
                     width: 2rem;
                     height: 2rem;
                     padding: 0.5rem;
-                    background: $grey-500;
+                    background: $grey-200;
                     border-radius: 50%;
                     border: none;
-                    color: $white;
+                    color: $grey-500;
                     cursor: pointer;
                     transition: background-color 0.2s;
+                    z-index: 999;
 
                     &:hover {
-                        background-color: $grey-200;
-                        color: $grey-500;
+                        background-color: $grey-500;
+                        color: $white;
                     }
                 }
 
@@ -153,4 +154,70 @@ p {
             padding: $spacing-500 $spacing-400;
         }
     }
+}
+
+@media (max-width: 425px) {
+
+    body{
+        margin: $spacing-600 $spacing-300;
+    }
+
+    .main-container{
+        flex-direction: column;
+
+        .img-container {
+            max-width: 100%;
+            height: auto;
+
+        .main-img {
+            border-radius: 10px 10px 0 0;
+        }
+        }
+    
+        .text-section{
+            width: 100%;
+            padding: $spacing-500 $spacing-300 $spacing-200 $spacing-300;
+
+            .main-p{
+                padding-bottom: $spacing-600;
+            }
+
+            .author-section {
+
+            &.popup-active {
+                .author-img, .author {
+                    display: none;
+                }
+            }
+
+            .share-wrapper {
+                position: static;
+                z-index: 0; 
+
+                .share-svg {
+                    position: relative;
+                    z-index: 30;
+                    margin-bottom: 0.5rem;
+                }
+
+                .popup-container {
+                    bottom: 0;
+                    width: 100%;
+                    border-radius: 0 0 10px 10px;
+                    padding: 1.8rem 10rem 1.8rem 2rem;
+                    display: none;
+                    z-index: 10;
+
+                    &::after {
+                    display: none;
+                    }
+
+                    &.show {
+                    display: flex;
+                    }
+                }
+            }
+        }
+    }
+}  
 }
