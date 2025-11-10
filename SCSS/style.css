@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Spacing */
 /* Colors */
 /* Typography */
@@ -133,7 +132,6 @@ p {
   font-size: 0.813rem; /* 13px */
   font-weight: 500;
   line-height: 140%;
-  /* small letter-spacing for uppercase labels — 2rem was a mistake */
   letter-spacing: 0.25em;
   text-transform: uppercase;
 }
