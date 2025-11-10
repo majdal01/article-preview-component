@@ -60,7 +60,8 @@ p {
   height: 100%;
   width: 100%;
   border-radius: 10px 0 0 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-container .text-section {
   padding: 2rem 2.5rem;
@@ -213,6 +214,4 @@ p {
   .main-container .text-section .author-section .share-wrapper #popup {
     bottom: 0;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
