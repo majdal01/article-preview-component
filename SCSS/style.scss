@@ -154,9 +154,36 @@ p {
             padding: $spacing-500 $spacing-400;
         }
     }
+
 }
 
-@media (max-width: 425px) {
+@media (max-width: 653px) {
+
+    .main-container{
+
+        .img-container {
+            max-width: 12rem;
+        }
+    }
+    
+}
+
+@media (max-width: 617px) {
+
+    .main-container{
+
+        .img-container {
+            max-width: 12rem;
+        }
+
+        #popup {
+        bottom: 5rem;
+        }
+    }
+    
+}
+
+@media (max-width: 500px) {
 
     body{
         margin: $spacing-600 $spacing-300;
@@ -215,6 +242,10 @@ p {
                     &.show {
                     display: flex;
                     }
+                }
+
+                #popup {
+                    bottom: 0;
                 }
             }
         }

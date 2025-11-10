@@ -152,7 +152,20 @@ p {
     padding: 2.5rem 2rem;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 653px) {
+  .main-container .img-container {
+    max-width: 12rem;
+  }
+}
+@media (max-width: 617px) {
+  .main-container .img-container {
+    max-width: 12rem;
+  }
+  .main-container #popup {
+    bottom: 5rem;
+  }
+}
+@media (max-width: 500px) {
   body {
     margin: 3rem 1.5rem;
   }
@@ -198,6 +211,9 @@ p {
   }
   .main-container .text-section .author-section .share-wrapper .popup-container.show {
     display: flex;
+  }
+  .main-container .text-section .author-section .share-wrapper #popup {
+    bottom: 0;
   }
 }
 
